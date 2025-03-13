@@ -8,10 +8,10 @@ function generateExpression() {
     const x = Array.from({ length: 5 }, getRandomBoolean);
     
     // Expression format 1
-    const ex1 = `((${x[0]} && ${x[1]} && ${x[2]}) || (${x[3]} && ${x[4]}))`;
+    const ex1 = `(${x[0]} && ${x[1]} && ${x[2]}) || (${x[3]} && ${x[4]})`;
     
     // Expression format 2
-    const ex2 = `(${x[0]} && ${x[1]} && ${x[2]} || ${x[3]} && ${x[4]})`;
+    const ex2 = `${x[0]} && ${x[1]} && ${x[2]} || ${x[3]} && ${x[4]}`;
     
     return eval(ex1) === eval(ex2);
 }
